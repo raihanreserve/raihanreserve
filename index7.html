@@ -4,7 +4,7 @@
 		<meta charset="UTF-8" />
 		<meta http-equiv="X-UA-Compatible" content="IE=edge">
 		<meta name="viewport" content="width=device-width, initial-scale=1">
-		<title>Segment Effect | Demo 2 | Codrops</title>
+		<title>Segment Effect | Demo 1 | Codrops</title>
 		<meta name="description" content="Background image segment effect" />
 		<meta name="keywords" content="css, html, backgorund image, effect, boxes, segments" />
 		<meta name="author" content="Codrops" />
@@ -15,12 +15,12 @@
 		<link rel="stylesheet" type="text/css" href="css/component.css" />
 		<!--[if IE]>
 			<script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
-		<![endif]-->
+			<![endif]-->
 		<script>
 		document.documentElement.className = 'js';
 		</script>
 	</head>
-	<body class="demo-2">
+	<body class="demo-1">
 		<svg class="hidden">
 			<defs>
 				<symbol id="icon-arrow" viewBox="0 0 24 24">
@@ -59,14 +59,14 @@
 				</a>
 			</header>
 			<!-- Initial markup -->
-			<div class="segmenter" style="background-image: url(img/2.jpg)"></div>
-			<h2 class="trigger-headline trigger-headline--hidden"><span>C</span><span>o</span><span>p</span><span>p</span><span>e</span><span>r</span></h2>
+			<div class="segmenter" style="background-image: url(img/1.jpg)"></div>
+			<h2 class="trigger-headline trigger-headline--hidden"><span>M</span><span>o</span><span>t</span><span>i</span><span>o</span><span>n</span></h2>
 			<div class="bottom-nav">
-				<button class="btn btn--trigger">Show Effect</button>
+				<button class="btn btn--trigger btn--hidden">Show Effect</button>
 				<nav class="codrops-demos">
 					<span>Examples: </span>
-					<a href="index.html">1</a>
-					<a class="current-demo" href="index2.html">2</a>
+					<a class="current-demo" href="index.html">1</a>
+					<a href="index2.html">2</a>
 					<a href="index3.html">3</a>
 					<a href="index4.html">4</a>
 					<a href="index5.html">5</a>
@@ -82,20 +82,6 @@
 			var headline = document.querySelector('.trigger-headline'),
 				trigger = document.querySelector('.btn--trigger'),
 				segmenter = new Segmenter(document.querySelector('.segmenter'), {
-					pieces: 4,
-					animation: {
-						duration: 1500,
-						easing: 'easeInOutExpo',
-						delay: 100,
-						translateZ: 100
-					},
-					parallax: true,
-					positions: [
-						{top: 0, left: 0, width: 45, height: 45},
-						{top: 55, left: 0, width: 45, height: 45},
-						{top: 0, left: 55, width: 45, height: 45},
-						{top: 55, left: 55, width: 45, height: 45}
-					],
 					onReady: function() {
 						trigger.classList.remove('btn--hidden');
 						trigger.addEventListener('click', function() {
